@@ -9,7 +9,7 @@ const PORT = 3000;
 app.use(express.static('public'));
 app.use(express.json()); // ⬅️ 一定要加這行才能接收 JSON
 
-// ✅ 建立 SQLite 連線（包含錯誤提示）
+// 建立 SQLite 連線（包含錯誤提示）
 const db = new sqlite3.Database('./bento.db', (err) => {
     if (err) {
         console.error("❌ 資料庫連線失敗：", err.message);
