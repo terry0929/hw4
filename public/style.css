@@ -2,47 +2,134 @@ body {
     font-family: "Segoe UI", sans-serif;
     background-color: #f5f5f5;
     padding: 20px;
+    margin: 0;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1100px;
     margin: auto;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
     color: #333;
-}
-
-#searchInput {
-    width: 70%;
-    padding: 10px;
-    font-size: 16px;
     margin-bottom: 10px;
 }
 
-button {
-    padding: 10px 15px;
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 50%;
+    padding: 10px;
     font-size: 16px;
-    margin-left: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #444;
+    color: white;
     cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #333;
+}
+
+/* 🔧 美化表單卡片區塊 */
+.form-box {
+    margin-top: 30px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fcfcfc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-box h2 {
+    font-size: 20px;
+    color: #663399;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-box h2::before {
+    content: "➕";
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.form-box input {
+    margin: 8px 10px 8px 0;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 180px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.form-box input:focus {
+    border-color: #663399;
+    outline: none;
+}
+
+.form-box button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #663399;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.form-box button:hover {
+    background-color: #4a2473;
+}
+
+/* 🔧 美化表格 */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 30px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    min-width: 900px;
 }
 
 th, td {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 12px;
+    white-space: nowrap;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 th {
-    background-color: #eee;
+    background-color: #f0f0f0;
+    font-weight: 600;
+    text-align: left;
 }

@@ -2,16 +2,34 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>台鐵便當查詢系統</title>
+    <title>台鐵便當據點查詢</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <h1>🍱 台鐵便當販售據點查詢</h1>
-    <input type="text" id="searchInput" placeholder="請輸入關鍵字，例如 台中 / 高雄 / 車站">
-    <button onclick="searchShops()">搜尋</button>
-    <div id="results"></div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="請輸入關鍵字，例如 台中 / 高雄 / 車站">
+        <button onclick="searchShops()">搜尋</button>
+    </div>
+    <div class="form-box">
+        <h2>新增便當據點</h2>
+        <input id="branch" placeholder="分處">
+        <input id="shop_name" placeholder="店名">
+        <input id="location" placeholder="位置">
+        <input id="service_time" placeholder="營業時間">
+        <input id="phone" placeholder="電話">
+        <button onclick="addShop()">新增</button>
+    </div>
+
+
+
+    <div class="table-wrapper">
+        <div id="results"></div>
+    </div>
 </div>
 <script src="script.js"></script>
 </body>
+
 </html>
